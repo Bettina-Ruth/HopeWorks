@@ -8,18 +8,47 @@
 
 <div class="section">
   <h2>Create Account</h2>
+  <p class="page-intro">Register once to browse jobs, post roles, and keep your HopeWorks profile in sync.</p>
 
   <div class="card">
-    <input placeholder="Full Name"><br><br>
-    <input placeholder="Email"><br><br>
-    <input type="password" placeholder="Password"><br><br>
+    <form id="registerForm">
+      <input id="registerName" type="text" placeholder="Full Name" required><br><br>
+      <input id="registerEmail" type="email" placeholder="Email" required><br><br>
+      <input id="registerPassword" type="password" placeholder="Password" required><br><br>
+      <select id="registerRole" required>
+        <option value="">Select Role</option>
+        <option value="Job Seeker">Job Seeker</option>
+        <option value="Hirer">Hirer</option>
+        <option value="NGO">NGO</option>
+      </select><br><br>
+      <button type="submit">Register</button>
+      <p id="registerMessage" class="status-message" aria-live="polite"></p>
+    </form>
+  </div>
 
-    <button onclick="showMessage('Registered!')">
-      Register
-    </button>
+  <div class="card profile-layout">
+    <div class="signature-area">
+      <h3>Profile Signature</h3>
+      <p class="section-copy">Draw your signature for profile and application records.</p>
+      <canvas id="signatureCanvas" width="520" height="220"></canvas>
+      <div class="signature-actions">
+        <button type="button" id="clearSignatureButton">Clear</button>
+        <button type="button" id="saveSignatureButton">Save Signature</button>
+      </div>
+      <p id="signatureMessage" class="status-message" aria-live="polite"></p>
+    </div>
+
+    <div class="profile-area">
+      <h3>Saved Profile</h3>
+      <div id="profile-root"></div>
+    </div>
   </div>
 </div>
 
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script src="hopeworks.js"></script>
+<script src="register-features.js"></script>
+<script src="user-profile-react.js"></script>
 </body>
 </html>

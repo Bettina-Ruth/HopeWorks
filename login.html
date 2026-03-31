@@ -8,17 +8,19 @@
 
 <div class="section">
   <h2>Login</h2>
+  <p class="page-intro">Use the account you created on HopeWorks to apply for jobs or post openings.</p>
 
   <div class="card">
-    <input placeholder="Email"><br><br>
-    <input type="password" placeholder="Password"><br><br>
-
-    <button onclick="showMessage('You have to register first')">
-      Login
-    </button>
+    <form id="loginForm">
+      <input id="loginEmail" type="email" placeholder="Email" required><br><br>
+      <input id="loginPassword" type="password" placeholder="Password" required><br><br>
+      <button type="submit">Login</button>
+      <p id="loginMessage" class="status-message" aria-live="polite"></p>
+    </form>
   </div>
 </div>
 
 <script src="hopeworks.js"></script>
+<script src="login-features.js"></script>
 </body>
 </html>

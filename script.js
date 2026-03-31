@@ -44,16 +44,28 @@ function isUserLoggedIn() {
   return localStorage.getItem("isLoggedIn") === "true";
 }
 
-function syncCurrentUserWithStoredUser() {
-  const storedUser = getStoredUser();
-  const currentUser = getCurrentUser();
+function setLoginState(isLoggedIn) {
+  localStorage.setItem("isLoggedIn", isLoggedIn ? "true" : "false");
+}
 
-  if (!storedUser || !currentUser) {
+function logoutUser() {
+  // Login/logout flow: clear auth state and return to the main homepage entry.
+  localStorage.removeItem("isLoggedIn");
+  localStorage.removeItem("currentUser");
+  localStorage.removeItem("redirectAfterLogin");
+  updateNavbarAuthState();
+
+  if (window.parent && window.parent !== window) {
+    window.parent.updateNavbarAuthState();
+    window.parent.location.href = "index.html";
     return;
   }
 
-  if (storedUser.email === currentUser.email) {
-    localStorage.setItem("currentUser", JSON.stringify(storedUser));
+  const frame = document.querySelector('iframe[name="contentFrame"]');
+  if (frame) {
+    window.location.href = "index.html";
+  } else {
+    window.location.href = "index.html";
   }
 }
 
@@ -66,7 +78,7 @@ function updateNavbarAuthState() {
     return;
   }
 
-  // Access control in the navbar: guests see Login/Register, authenticated users see Logout.
+  // Navbar logic: guests see Login/Register, authenticated users see Logout only.
   if (isUserLoggedIn()) {
     loginItem.style.display = "none";
     registerItem.style.display = "none";
@@ -78,35 +90,6 @@ function updateNavbarAuthState() {
   }
 }
 
-function logoutUser() {
-  // Logout logic: remove active session keys and return the user to the homepage shell.
-  localStorage.removeItem("isLoggedIn");
-  localStorage.removeItem("currentUser");
-
-  if (window.parent && window.parent !== window && typeof window.parent.updateNavbarAuthState === "function") {
-    window.parent.updateNavbarAuthState();
-    window.parent.location.href = "index.html";
-    return;
-  }
-
-  updateNavbarAuthState();
-  window.location.href = "index.html";
-}
-
-function bindLogoutButton() {
-  const logoutLink = document.getElementById("logoutLink");
-
-  if (!logoutLink || logoutLink.dataset.bound === "true") {
-    return;
-  }
-
-  logoutLink.dataset.bound = "true";
-  logoutLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    logoutUser();
-  });
-}
-
 function bindFrameNavigation() {
   const frame = document.querySelector('iframe[name="contentFrame"]');
 
@@ -115,11 +98,6 @@ function bindFrameNavigation() {
   }
 
   document.querySelectorAll('a[target="contentFrame"]').forEach(function (link) {
-    if (link.dataset.bound === "true") {
-      return;
-    }
-
-    link.dataset.bound = "true";
     link.addEventListener("click", function (event) {
       event.preventDefault();
       frame.src = link.getAttribute("href");
@@ -128,9 +106,8 @@ function bindFrameNavigation() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  syncCurrentUserWithStoredUser();
+  // Default state: if isLoggedIn is missing or not "true", the UI stays logged out.
   updateNavbarAuthState();
-  bindLogoutButton();
   bindFrameNavigation();
 
   if (window.parent && window.parent !== window && typeof window.parent.updateNavbarAuthState === "function") {

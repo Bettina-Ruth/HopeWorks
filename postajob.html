@@ -8,15 +8,16 @@
 
 <div class="section">
   <h2>Post a Job</h2>
+  <p class="page-intro">Anyone can view this page. Sign in only when you are ready to publish a job.</p>
 
   <div class="card">
-    <input placeholder="Job Title"><br><br>
-    <input placeholder="Location"><br><br>
-    <textarea placeholder="Description"></textarea><br><br>
-
-    <button onclick="showMessage('You have to register first')">
-      Submit Job
-    </button>
+    <form id="postJobForm">
+      <input id="jobTitle" type="text" placeholder="Job Title" required><br><br>
+      <input id="jobLocation" type="text" placeholder="Location" required><br><br>
+      <textarea id="jobDescription" placeholder="Description" required></textarea><br><br>
+      <button type="submit">Post Job</button>
+      <p id="postJobMessage" class="status-message" aria-live="polite"></p>
+    </form>
   </div>
 </div>
 
@@ -42,5 +43,6 @@
 </div>
 
 <script src="hopeworks.js"></script>
+<script src="post-job.js"></script>
 </body>
 </html>

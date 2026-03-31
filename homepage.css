@@ -22,6 +22,9 @@ display:flex; gap:25px; margin-right:50px;
 .button1 a{
 padding:8px; border-radius:10px; line-height:25px
 }
+.button1{
+margin: 0;
+}
 .button1 a:hover{
 background-color:pink; 
 }
@@ -169,6 +172,169 @@ button {
 
 button:hover {
   background: #1d4ed8;
+}
+
+input,
+select,
+textarea {
+  width: min(100%, 520px);
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.page-intro {
+  max-width: 700px;
+  margin: 0 auto 16px auto;
+  font-size: 18px;
+}
+
+.status-message {
+  min-height: 24px;
+  margin-top: 14px;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+.status-message.error-message {
+  color: #b91c1c;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.section-copy {
+  margin-top: 0;
+}
+
+.signature-area,
+.profile-area {
+  width: 100%;
+}
+
+#signatureCanvas {
+  width: 100%;
+  max-width: 520px;
+  border: 2px solid #93c5fd;
+  border-radius: 12px;
+  background: #fff;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.signature-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.profile-panel,
+.profile-panel-empty {
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  padding: 20px;
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+}
+
+.profile-panel-empty {
+  text-align: center;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.profile-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.profile-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.profile-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.signature-preview-wrap {
+  margin-top: 18px;
+}
+
+.signature-preview {
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.profile-caption {
+  margin-top: 18px;
+  color: #475569;
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: auto;
+    padding-bottom: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nbox {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 16px 0 10px;
+  }
+
+  iframe {
+    height: 82vh;
+    margin-top: 110px;
+  }
+
+  .row1,
+  .flex,
+  .ctarow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .columns {
+    display: block;
+    column-count: 1;
+    column-gap: 0;
+  }
 }
 
 footer {
