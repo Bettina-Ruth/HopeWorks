@@ -1,184 +1,105 @@
-<!DOCTYPLE html>
-<html>
-<title>Project</title>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="homepage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HopeWorks Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">Inclusive employment platform</span>
+        <h2>Because everyone deserves a <span class="accent-text">fair chance</span> to earn.</h2>
+        <p>HopeWorks helps job seekers, hirers, and NGOs connect through practical local work. Browse jobs freely, post opportunities when signed in, and keep your profile ready for the next opportunity.</p>
+        <div class="hero-actions">
+          <button type="button" class="button" onclick="goToPage()">Find Jobs</button>
+          <button type="button" class="button-secondary" onclick="goToPage2()">Post a Job</button>
+        </div>
+      </div>
 
-<div class="caption">
-<div class="fade-up">
-<h2>Becuase everyone deserves <br>a chance to earn</h2>
-</div>
-</div>
+      <div class="hero-panel">
+        <div class="stat-chip">
+          <strong>10,000+</strong>
+          <span>people connected to work through local hiring.</span>
+        </div>
+        <div class="stat-chip">
+          <strong>3 roles</strong>
+          <span>Job Seeker, Hirer, and NGO journeys supported in one system.</span>
+        </div>
+        <div class="stat-chip">
+          <strong>Fast access</strong>
+          <span>View jobs without logging in, then sign in only when you need to act.</span>
+        </div>
+      </div>
+    </section>
 
-<div class="description">
-<p>HopeWorks is a digital platform that <span style="color:red"><b>empowers</b></span> lives by replacing unemployment with meaningful work. We make it easy to find local work, apply quickly, and build real-world skills to help them earn with dignity.
-Our mission is to create hope through accessible employment for everyone.</p>
-</div>
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Explore how HopeWorks works</h2>
+        <p>The platform is built to keep navigation simple while still protecting actions like job posting and applications, while profile details and signatures stay inside the registration flow.</p>
+      </div>
 
-<div class="flex">
-<div class="box1 flex1">
-<p>10,000 people hired across the world</p>
-</div>
-<div class="box1 flex2">
-<p>Simple, safe, and quick hiring</p>
-</div>
-<div class="box1 flex3">
-<p>Trusted platform for NGOs</p>
-</div>
-</div>
-<div class="categories">
-<p>Explore our job categories</p>
-<div class="row1">
-<div class="box2">
-<p>Cleaning</p>
-</div>
-<div class="box2">
-<p>Delivery</p>
-</div>
-<div class="box2">
-<p>Helper</p>
-</div>
-<div class="box2">
-<p>Skilled work</p>
-</div>
-<div class="box2">
-<p>Daily wage jobs</p>
-</div>
-<div class="box2">
-<p>Moving</p>
-</div>
-</div>
-</div>
+      <div class="card-grid">
+        <article class="info-card">
+          <h3>Job Seekers</h3>
+          <p>Create an account, browse openings, and apply when the right role appears.</p>
+        </article>
+        <article class="info-card">
+          <h3>Hirers</h3>
+          <p>Log in to post openings, describe the role clearly, and attract relevant applicants.</p>
+        </article>
+        <article class="info-card">
+          <h3>NGOs</h3>
+          <p>Register as an NGO to guide candidates and connect communities with opportunities.</p>
+        </article>
+      </div>
+    </section>
 
-<div class="listings">
-<p>Job listings</p>
-<div class="row1">
-<div class="post" onclick="goToPage()">
-<h2>House Cleaning Assistent</h2>
-<img src="housecleaning.jpg" alt="house cleaning">
-<p>Need help cleaning a 2-BHK house.</p>
-</div>
-<div class="post" onclick="goToPage()">
-<h2>Helper for shifting House</h2>
-<img src="houseshifting.jpg" alt="house shifting">
-<p>Need 5 helpers for shifting household items.</p>
-</div>
-<div class="post" onclick="goToPage()">
-<h2>Local grocery delivery</h2>
-<img src="grocery.jpg" alt="grocery delivery">
-<p>Deliver groceries within 3km radius.</p>
-</div>
-</div>
-</div>
+    <section class="content-section" id="start">
+      <div class="section-heading">
+        <h2>Getting started is straightforward</h2>
+        <p>Each path follows the same structure: create an account, sign in, then take role-specific actions.</p>
+      </div>
 
-<section id="start">
-<div class="started">
-<h2>How to get started</h2>
-<div class="columns">
-<div>
-<h2>Job seekers</h2>
-<div class="list">
-<h1> 1 </h1>
-<p>Create an account</p>
-</div>
-<div class="list">
-<h1>2</h1>
-<p>Browse available jobs</p>
-</div>
-<div class="list">
-<h1>3</h1>
-<p>Apply for suitable work</h3>
-</div>
-<div class="list">
-<h1>4</h1>
-<p>Get paid after completion</p>
-</div>
-</div>
-<div>
-<h2>Hirers</h2>
-<div class="list">
-<h1> 1 </h1>
-<p>Create an account</p>
-</div>
-<div class="list">
-<h1>2</h1>
-<p>Post job requirements</p>
-</div>
-<div class="list">
-<h1>3</h1>
-<p>Hire workers</h3>
-</div>
-<div class="list">
-<h1>4</h1>
-<p>Pay securely</p>
-</div>
-</div>
-<div>
-<h2>NGOs</h2>
-<div class="list">
-<h1> 1 </h1>
-<p>Register your organization</p>
-</div>
-<div class="list">
-<h1>2</h1>
-<p>Train unemployed individuals</p>
-</div>
-<div class="list">
-<h1>3</h1>
-<p>Connect workers with hirers</h3>
-</div>
-<div class="list">
-<h1>4</h1>
-<p>Track impact</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+      <div class="steps-grid">
+        <article class="info-card">
+          <h3>1. Register</h3>
+          <p>Choose your role, save your details, and keep your profile ready for future actions.</p>
+        </article>
+        <article class="info-card">
+          <h3>2. Browse</h3>
+          <p>Anyone can view jobs before logging in, which keeps the platform open and accessible.</p>
+        </article>
+        <article class="info-card">
+          <h3>3. Take Action</h3>
+          <p>Applying and posting a job require login, while your saved profile details remain available in the registration section.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-<div class="cta">
-<h1>Join HopeWorks now!</h1>
-<div class="ctarow">
-<div class="workers">
-<p>Ready to work? Your next job starts here.<p>
-<button class="button" onclick="goToPage()">Find jobs</button>
-</div>
-<div class="hirers">
-<p>Need workers? Hire skilled talent in minutes.</p>
-<button class="button" onclick="goToPage2()">Post jobs</button>
-</div>
-<div class="ngos">
-<p>Train people. Change lives. Build a better world.<p>
-<button class="button">Partner with us</button>
-</div>
-</div>
-</div>
+  <footer class="footer">
+    <div class="footer-links">
+      <div>
+        <h3>HopeWorks</h3>
+        <p>Accessible employment, local hiring, and practical support.</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="homepage.html#start">How It Works</a></p>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="faqs.html">FAQs</a></p>
+      </div>
+    </div>
+    <p class="footer-note">© 2026 HopeWorks. All rights reserved.</p>
+  </footer>
 
-<div class="footer">
-<h2>Company</h2>
-<p><a href="about.html">About us</a></p>
-<p><a href="#start">How it works</a></p>
-<p><a href="contact.html">Contact us</a></p>
-<p><a href="faqs.html">FAQs</a></p>
-<hr>
-<div class="bottom">
-<div class="icon">
-<p><b>HopeWorks</b></p>
-</div>
-<p>© 2026 HopeWorks — All rights reserved</p>
-<div class="socials">
-<p><a href="contact.html"><i class="fa-solid fa-phone"></i></a></p>
-<p><a href="contact.html"><i class="fa-solid fa-at"></i></a></p>
-<p><a href="instagram.com"><i class="fa-brands fa-square-instagram"></i></a></p>
-<p><a href="linkedin.com"><i class="fa-brands fa-linkedin"></i></a></p>
-</div>
-</div>
-</div>
-
-<script src="hopeworks.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

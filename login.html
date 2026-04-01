@@ -1,26 +1,39 @@
-<!DOCTYPLE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="homepage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | HopeWorks</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <section class="section">
+    <h2>Login to Continue</h2>
+    <p class="page-intro" id="loginNote">Use your registered HopeWorks account to apply for jobs, post openings, and manage your profile.</p>
 
-<div class="section">
-  <h2>Login</h2>
-  <p class="page-intro">Use the account you created on HopeWorks to apply for jobs or post openings.</p>
+    <div class="card">
+      <form id="loginForm" class="form-grid">
+        <input id="loginEmail" type="email" placeholder="Email Address" required>
+        <input id="loginPassword" type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p id="loginMessage" class="status-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
-  <div class="card">
-    <form id="loginForm">
-      <input id="loginEmail" type="email" placeholder="Email" required><br><br>
-      <input id="loginPassword" type="password" placeholder="Password" required><br><br>
-      <button type="submit">Login</button>
-      <p id="loginMessage" class="status-message" aria-live="polite"></p>
-    </form>
-  </div>
-</div>
+  <footer class="footer">
+    <div class="footer-links">
+      <div>
+        <h3>No account yet?</h3>
+        <p><a href="register.html">Create an account</a></p>
+      </div>
+      <div>
+        <h3>Browse first</h3>
+        <p><a href="findjobs.html">View jobs without login</a></p>
+      </div>
+    </div>
+  </footer>
 
-<script src="hopeworks.js"></script>
-<script src="login-features.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

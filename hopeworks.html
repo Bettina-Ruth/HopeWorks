@@ -1,27 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="homepage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HopeWorks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<body data-page="shell">
+  <div class="app-shell">
+    <header class="header">
+      <div class="brand-mark">
+        <div class="brand-badge">HW</div>
+        <div class="brand-copy">
+          <h1>HopeWorks</h1>
+          <p>Work, dignity, and opportunity in one place.</p>
+        </div>
+      </div>
 
-<body>
-<h1 class="name">Reg no: 24BCE1249<br>Name: Bettina Ruth</h1>
-<div class="header">
-<div class="icon">
-<p><b>HopeWorks</b></p>
-</div>
-<div class = "nbox">
-<p class="button1"> <a href="homepage.html" target="contentFrame"><i class="fa fa-home"></i> Home</a></p>
-<p class="button1"> <a href="findjobs.html" target="contentFrame"><i class="fa fa-search"></i> Find jobs</a></p>
-<p class="button1"> <a href="postajob.html" target="contentFrame"><i class="fa fa-bullhorn"></i> Post a job</a></p>
-<p class="button1" id="loginBtn"> <a href="login.html" target="contentFrame"><i class="fa fa-sign-in"></i> Login</a></p>
-<p class="button1" id="registerBtn"> <a href="register.html" target="contentFrame"><i class="fa fa-pencil"></i> Register</a></p>
-<p class="button1" id="logoutBtn" style="display:none;"> <a href="#" id="logoutLink"><i class="fa fa-sign-out"></i> Logout</a></p>
-</div>
-</div>
-<iframe src="homepage.html" name="contentFrame"></iframe>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-link" href="homepage.html" data-page-link="homepage.html"><i class="fa fa-home"></i> Home</a>
+        <a class="nav-link" href="findjobs.html" data-page-link="findjobs.html"><i class="fa fa-search"></i> Find Jobs</a>
+        <a class="nav-link" href="postajob.html" data-page-link="postajob.html"><i class="fa fa-bullhorn"></i> Post Job</a>
+        <a class="nav-link" href="login.html" data-page-link="login.html" id="loginBtn"><i class="fa fa-sign-in"></i> Login</a>
+        <a class="nav-link" href="register.html" data-page-link="register.html" id="registerBtn"><i class="fa fa-pencil"></i> Register</a>
+        <a class="nav-link nav-accent" href="#" id="logoutBtn" style="display:none;"><i class="fa fa-sign-out"></i> <span id="logoutLink">Logout</span></a>
+      </nav>
+    </header>
 
-<script src="hopeworks.js"></script>
+    <iframe class="shell-frame" src="homepage.html" name="contentFrame" title="HopeWorks content"></iframe>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

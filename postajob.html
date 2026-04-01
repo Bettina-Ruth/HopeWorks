@@ -1,48 +1,37 @@
-<!DOCTYPLE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="homepage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job | HopeWorks</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <section class="section">
+    <h2>Post a Job</h2>
+    <p class="page-intro">Anyone can open this page. Login is only required when you actually try to submit a job.</p>
 
-<div class="section">
-  <h2>Post a Job</h2>
-  <p class="page-intro">Anyone can view this page. Sign in only when you are ready to publish a job.</p>
+    <div class="card">
+      <form id="postJobForm" class="form-grid">
+        <input id="jobTitle" type="text" placeholder="Job Title" required>
+        <input id="jobLocation" type="text" placeholder="Location" required>
+        <input id="jobType" type="text" placeholder="Job Type" required>
+        <textarea id="jobDescription" placeholder="Describe the work clearly" required></textarea>
+        <button type="submit">Post Job</button>
+        <p id="postJobMessage" class="status-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
-  <div class="card">
-    <form id="postJobForm">
-      <input id="jobTitle" type="text" placeholder="Job Title" required><br><br>
-      <input id="jobLocation" type="text" placeholder="Location" required><br><br>
-      <textarea id="jobDescription" placeholder="Description" required></textarea><br><br>
-      <button type="submit">Post Job</button>
-      <p id="postJobMessage" class="status-message" aria-live="polite"></p>
-    </form>
-  </div>
-</div>
+  <footer class="footer">
+    <div class="footer-links">
+      <div>
+        <h3>What happens next?</h3>
+        <p>Posted jobs are kept only for the current session and appear immediately in the job listings page.</p>
+      </div>
+    </div>
+  </footer>
 
-<div class="footer">
-<p><b>Company</b></p>
-<p><a href="about.html">About us</a></p>
-<p><a href="how.html">How it works</a></p>
-<p><a href="contact.html">Contact us</a></p>
-<p><a href="faqs.html">FAQs</a></p>
-<hr>
-<div class="bottom">
-<div class="icon">
-<p><b>HopeWorks</b></p>
-</div>
-<p>© 2026 HopeWorks — All rights reserved</p>
-<div class="socials">
-<p><a href="contact.html"><i class="fa-solid fa-phone"></i></a></p>
-<p><a href="contact.html"><i class="fa-solid fa-at"></i></a></p>
-<p><a href="instagram.com"><i class="fa-brands fa-square-instagram"></i></a></p>
-<p><a href="linkedin.com"><i class="fa-brands fa-linkedin"></i></a></p>
-</div>
-</div>
-</div>
-
-<script src="hopeworks.js"></script>
-<script src="post-job.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

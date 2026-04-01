@@ -1,0 +1,484 @@
+:root {
+  --bg: #f6efe4;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: #fffdf7;
+  --text: #1f2937;
+  --muted: #5f6b7a;
+  --accent: #0f766e;
+  --accent-dark: #115e59;
+  --accent-soft: #ccfbf1;
+  --warm: #f97316;
+  --line: rgba(15, 118, 110, 0.16);
+  --shadow: 0 18px 45px rgba(31, 41, 55, 0.08);
+  --radius: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.18), transparent 24%),
+    linear-gradient(180deg, #fffaf3 0%, #f1f5f9 100%);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 28px;
+  background: rgba(255, 253, 247, 0.9);
+  border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-badge {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  color: white;
+  font-weight: 700;
+}
+
+.brand-copy h1,
+.brand-copy p {
+  margin: 0;
+}
+
+.brand-copy h1 {
+  font-size: 1.3rem;
+}
+
+.brand-copy p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+  background: rgba(15, 118, 110, 0.08);
+  border-color: rgba(15, 118, 110, 0.12);
+}
+
+.nav-link.nav-accent {
+  background: var(--accent);
+  color: white;
+}
+
+.nav-link.nav-accent:hover {
+  background: var(--accent-dark);
+}
+
+.shell-frame {
+  width: 100%;
+  height: calc(100vh - 88px);
+  border: 0;
+}
+
+.hero,
+.section,
+.content-section {
+  padding: 48px 6vw;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-copy,
+.hero-panel,
+.card,
+.job-card,
+.info-card,
+.profile-card,
+.signature-card {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.hero-copy {
+  padding: 36px;
+  animation: float-up 0.75s ease;
+}
+
+.hero-copy h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.05;
+}
+
+.hero-copy p {
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.button,
+.button-secondary,
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.button,
+button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+}
+
+.button-secondary {
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+.button:hover,
+.button-secondary:hover,
+button:hover {
+  transform: translateY(-1px);
+}
+
+.hero-panel {
+  padding: 26px;
+  display: grid;
+  gap: 16px;
+}
+
+.stat-chip {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(249, 115, 22, 0.14));
+}
+
+.stat-chip strong,
+.stat-chip span {
+  display: block;
+}
+
+.stat-chip strong {
+  font-size: 1.7rem;
+}
+
+.stat-chip span {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.section-heading h2,
+.section h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.7rem, 2.8vw, 2.6rem);
+}
+
+.section-heading p,
+.section p,
+.page-intro {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card-grid,
+.jobs-grid,
+.steps-grid,
+.footer-links,
+.profile-layout {
+  display: grid;
+  gap: 20px;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.jobs-grid,
+.steps-grid,
+.profile-layout {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.info-card,
+.job-card,
+.card,
+.profile-card,
+.signature-card {
+  padding: 24px;
+}
+
+.info-card h3,
+.job-card h3,
+.card h3 {
+  margin-top: 0;
+}
+
+.job-card {
+  display: grid;
+  gap: 14px;
+}
+
+.job-meta,
+.job-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.job-meta span,
+.pill {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+}
+
+.job-owner {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.section {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(255, 255, 255, 0.95);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: rgba(15, 118, 110, 0.5);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.1);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.status-message {
+  min-height: 22px;
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+.status-message.error-message {
+  color: #b91c1c;
+}
+
+.status-message.success-message {
+  color: var(--accent-dark);
+}
+
+.footer {
+  margin-top: 36px;
+  padding: 28px 6vw 36px;
+  border-top: 1px solid rgba(15, 118, 110, 0.08);
+}
+
+.footer-links {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.footer-note {
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.profile-card strong,
+.signature-card strong {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.profile-card p {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+}
+
+#signatureCanvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: white;
+  border: 2px dashed rgba(15, 118, 110, 0.25);
+  border-radius: 18px;
+  margin: 14px 0;
+  touch-action: none;
+}
+
+.signature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.helper-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.accent-text {
+  color: var(--warm);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@keyframes float-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shell-frame {
+    height: calc(100vh - 142px);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero,
+  .section,
+  .content-section {
+    padding: 32px 18px;
+  }
+
+  .header {
+    padding: 16px 18px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-link {
+    padding: 9px 13px;
+    font-size: 0.95rem;
+  }
+}

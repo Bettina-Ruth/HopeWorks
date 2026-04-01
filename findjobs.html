@@ -1,50 +1,45 @@
-<!DOCTYPLE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="homepage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Jobs | HopeWorks</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <section class="section">
+    <h2>Available Jobs</h2>
+    <p class="page-intro">Viewing jobs stays open to everyone. The application form appears only after a successful login.</p>
 
-<div class="section">
-  <h2>Available Jobs</h2>
-  <p class="page-intro">Browse all openings freely. Logging in is only required when you choose to apply.</p>
+    <div id="jobsContainer" class="jobs-grid"></div>
 
-  <div class="card">
-    <h3>Delivery Helper</h3>
-    <p>Part-time • Daily pay</p>
-    <button class="apply-button" data-job-title="Delivery Helper">Apply</button>
-  </div>
+    <div class="card" id="applicationPanel" hidden>
+      <h3>Apply for <span id="selectedJobTitle">this role</span></h3>
+      <p class="helper-note">This form is available only to logged-in users.</p>
+      <form id="applicationForm" class="form-grid">
+        <input id="applicationJobTitle" type="hidden">
+        <input id="applicantName" type="text" placeholder="Your Name" required>
+        <input id="applicantPhone" type="tel" placeholder="Phone Number" required>
+        <textarea id="applicationNote" placeholder="Why are you a good fit?" required></textarea>
+        <button type="submit">Submit Application</button>
+        <p id="applicationMessage" class="status-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
-  <div class="card">
-    <h3>House Cleaning</h3>
-    <p>Flexible hours</p>
-    <button class="apply-button" data-job-title="House Cleaning">Apply</button>
-  </div>
-</div>
+  <footer class="footer">
+    <div class="footer-links">
+      <div>
+        <h3>Need help?</h3>
+        <p><a href="contact.html">Contact the team</a></p>
+      </div>
+      <div>
+        <h3>Learn more</h3>
+        <p><a href="about.html">About HopeWorks</a></p>
+      </div>
+    </div>
+  </footer>
 
-<div class="footer">
-<p><b>Company</b></p>
-<p><a href="about.html">About us</a></p>
-<p><a href="how.html">How it works</a></p>
-<p><a href="contact.html">Contact us</a></p>
-<p><a href="faqs.html">FAQs</a></p>
-<hr>
-<div class="bottom">
-<div class="icon">
-<p><b>HopeWorks</b></p>
-</div>
-<p>© 2026 HopeWorks — All rights reserved</p>
-<div class="socials">
-<p><a href="contact.html"><i class="fa-solid fa-phone"></i></a></p>
-<p><a href="contact.html"><i class="fa-solid fa-at"></i></a></p>
-<p><a href="instagram.com"><i class="fa-brands fa-square-instagram"></i></a></p>
-<p><a href="linkedin.com"><i class="fa-brands fa-linkedin"></i></a></p>
-</div>
-</div>
-</div>
-
-<script src="hopeworks.js"></script>
-<script src="find-jobs.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

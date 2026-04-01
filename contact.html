@@ -1,46 +1,37 @@
-<!DOCTYPLE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="homepage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | HopeWorks</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <section class="section">
+    <h2>Contact HopeWorks</h2>
+    <p class="page-intro">Send a quick message if you need support with registration, login, or job posting.</p>
 
-<div class="section">
-  <h2>Contact Us</h2>
+    <div class="card">
+      <form id="contactForm" class="form-grid">
+        <input id="contactName" type="text" placeholder="Your Name" required>
+        <input id="contactEmail" type="email" placeholder="Email Address" required>
+        <textarea id="contactQuery" placeholder="Write your message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="contactMessage" class="status-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
-  <div class="card">
-    <input placeholder="Your Name"><br><br>
-    <input placeholder="Email"><br><br>
-    <textarea placeholder="Message"></textarea><br><br>
+  <footer class="footer">
+    <div class="footer-links">
+      <div>
+        <h3>Quick links</h3>
+        <p><a href="register.html">Register</a></p>
+        <p><a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </footer>
 
-    <button onclick="showMessage('Message sent!')">
-      Send
-    </button>
-  </div>
-</div>
-
-<div class="footer">
-<p><b>Company</b></p>
-<p><a href="about.html">About us</a></p>
-<p><a href="how.html">How it works</a></p>
-<p><a href="contact.html">Contact us</a></p>
-<p><a href="faqs.html">FAQs</a></p>
-<hr>
-<div class="bottom">
-<div class="icon">
-<p><b>HopeWorks</b></p>
-</div>
-<p>© 2026 HopeWorks — All rights reserved</p>
-<div class="socials">
-<p><a href="contact.html"><i class="fa-solid fa-phone"></i></a></p>
-<p><a href="contact.html"><i class="fa-solid fa-at"></i></a></p>
-<p><a href="instagram.com"><i class="fa-brands fa-square-instagram"></i></a></p>
-<p><a href="linkedin.com"><i class="fa-brands fa-linkedin"></i></a></p>
-</div>
-</div>
-</div>
-
-<script src="hopeworks.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
